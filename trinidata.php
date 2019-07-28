@@ -11,11 +11,7 @@ $mdmClient = new MDMClient(
     "demo"
 );
 
-$replacements = [
-    'ДетскиеБольницы' => [
-        'Руководитель' => 'ФИОРуководителя'
-    ]
-];
+$replacements = require_once("replacements.php");
 
 foreach($replacements as $targetTypeId => $attributeIdsMap) {
     $limit = 100;
